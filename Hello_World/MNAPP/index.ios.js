@@ -6,11 +6,10 @@
 
 import React, { Component } from 'react';
 import Index from './pages/Index';
+
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View,
   NavigatorIOS
 } from 'react-native';
 
@@ -18,8 +17,7 @@ export default class MNAPP extends Component {
   render() {
     return (
         <NavigatorIOS style={styles.container}
-                      initialRoute={{title: '首页', component: Index}}
-        />
+                      initialRoute={{title: '首页', component: Index,}}/>
     );
   }
 }
