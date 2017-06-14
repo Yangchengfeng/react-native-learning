@@ -15,40 +15,60 @@ import {
 export default class MNAPP extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          React-Native 入门学习
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+      // <View style={[styles.flex_view_0, {flexDirection: 'row'}]}>
+      //   <View style={[styles.flex_view_1, , styles.left]}>
+      //     <Text style={{fontSize: 20}}>1/3靠左摆放</Text>
+      //   </View>
+      //   <View style={[styles.flex_view_1, styles.center]}>
+      //     <Text style={{fontSize: 20}}>1/3居中摆放</Text>
+      //   </View>
+      //   <View style={[styles.flex_view_1, styles.right]}>
+      //     <Text style={{fontSize: 20}}>1/3靠右摆放</Text>
+      //   </View>
+      // </View>
+      <View style={styles.view_0}>
+        <View style={styles.view_1}>
+          <Text style={{fontSize: 20}}>
+            方块居中
+          </Text>
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  view_0: {
     flex: 1,
-    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'red',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: 'center',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: 'red',
+  view_1: {
+    borderWidth: 1,
+    borderColor: 'blue',
+    height: 44,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  // flex_view_0: {
+  //   flex: 1,
+  //   borderWidth: 1,
+  //   borderColor: 'green',
+  // },
+  // flex_view_1: {
+  //   flex: 2,
+  //   borderWidth: 1,
+  //   borderColor: 'green',
+  // },
+  // center: {
+  //   alignSelf: 'center',
+  // },
+  // left: {
+  //   alignSelf: 'flex-start',
+  // },
+  // right: {
+  //   alignSelf: 'flex-end',
+  // },
 });
 
 AppRegistry.registerComponent('MNAPP', () => MNAPP);
