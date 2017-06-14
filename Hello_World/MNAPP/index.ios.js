@@ -17,7 +17,7 @@ export default class MNAPP extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native! -- GO ON, Fighting!!!
+          React-Native 入门学习
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: 'red',
   },
   instructions: {
     textAlign: 'center',
