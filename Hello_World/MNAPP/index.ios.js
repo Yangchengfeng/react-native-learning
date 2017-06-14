@@ -9,7 +9,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 export default class MNAPP extends Component {
@@ -19,6 +20,8 @@ export default class MNAPP extends Component {
         <Text style={styles.welcome}>
           React-Native 入门学习
         </Text>
+        <Image style={styles.pic} source={{uri: 'https://avatars3.githubusercontent.com/u/6133685?v=3&s=460'}}>
+        </Image>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
         </Text>
@@ -48,6 +51,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  pic: {
+     height: 100,
+     width: 100,
   },
 });
 
