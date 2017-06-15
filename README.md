@@ -1,5 +1,7 @@
 # react-native-learning
 
+[一]基础知识点
+
 1、环境配置：http://blog.csdn.net/yang_chengfeng/article/details/73196720
 
 2、了解index.ios.js文件：http://blog.csdn.net/yang_chengfeng/article/details/73224515
@@ -8,10 +10,8 @@
 
 4、实战了解布局原理：http://blog.csdn.net/yang_chengfeng/article/details/73251540
 
+[二]小试牛刀
+
+Project_1：LMN_SearchingForAToilet
 
 
-
-
-参考文献
-
-[一] https://github.com/vczero/react-native-lesson
