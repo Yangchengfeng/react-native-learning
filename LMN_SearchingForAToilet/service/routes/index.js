@@ -38,7 +38,7 @@ router.get('/edit', function(req, res, next) {
       case 'manager':
         obj = {};
         break;
-      case 'cookies':
+      case 'laugh':
         obj = {};
         break;
       default :
