@@ -73,6 +73,7 @@ sudo npm install -g supervisor
 ```
 supervisor bin/www
 ```
+每次执行这个命令行即可
 
 7、服务接口设计
 （1）服务架构
@@ -95,9 +96,36 @@ supervisor bin/www
 （5）阅读模块配置接口：/read?type=config
 
 - 采用：Node文件流，获取上面的json文件
+- node.js的fs模块
 
-10、数据的存储模块
+10、后台系统
+（1）数据存储：七牛云、微信公众号
 
+11、
+（1） 下载express-session插件：npm install express-session --save
+（2）在**app.js**中添加 `var session = require('express-session');`和认证加密：
+
+```
+app.use(session({
+  secret: '#sddjswjdhww22ygfw2233@@@%#$!@%Q!%*12',
+  resave: false,
+  saveUninitialized: true
+}));
+```
+12、登陆界面生成原理：
+（1）app.js:导入routes
+（2）由于` app.use('/', routes);`
+（3）routes文件下的index.js:
+
+```
+router.get('/', function(req, res, next) {
+    if(!req.session.user){
+        return res.render('login', {});
+    }
+    res.render('index', {});
+});
+```
+可知：/ 下到达login
 
 
 
