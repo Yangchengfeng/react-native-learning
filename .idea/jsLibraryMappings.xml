@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/Hello_World/MNAPP" libraries="{react-native-learning/Hello_World/MNAPP/node_modules}" />
+    <file url="file://$PROJECT_DIR$/LMN_SearchingForAToilet/service" libraries="{react-native-learning/LMN_SearchingForAToilet/service/node_modules}" />
+  </component>
+</project>
