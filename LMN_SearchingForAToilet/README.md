@@ -128,4 +128,6 @@ router.get('/', function(req, res, next) {
 可知：/ 下到达login
 
 
+13、react-native创建：https://facebook.github.io/react-native/docs/getting-started.html#content
 
+14、SwitchHosts软件
