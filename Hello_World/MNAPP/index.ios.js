@@ -13,6 +13,12 @@ import {
   TabBarIOS
 } from 'react-native';
 
+import Homepage from './View/ios_views/homepage';
+import Weitao from './View/ios_views/weitao';
+import Cart from './View/ios_views/cart';
+import Shequ from './View/ios_views/shequ';
+import Mine from './View/ios_views/mine';
+
 export default class MNAPP extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +30,9 @@ export default class MNAPP extends Component {
     return (
       <TabBarIOS  unselectedTintColor="black"
                   tintColor="red"
-                  barTintColor= 'white'>
+                  barTintColor='white'
+                  backgroundColor='white'
+                  translucent={false}>
         <TabBarIOS.Item title="首页"
                         selected={this.state.selectedTab === 'homepage'}
                         icon={require('./myIcon/lf_tabbar_home.png')}
@@ -34,7 +42,7 @@ export default class MNAPP extends Component {
                           this.setState({
                             selectedTab: 'homepage'
                           });}}>
-          <View></View>
+          {this._renderView()}
         </TabBarIOS.Item>
         <TabBarIOS.Item title="微淘"
                         selected={this.state.selectedTab === 'weitao'}
@@ -45,7 +53,7 @@ export default class MNAPP extends Component {
                           this.setState({
                             selectedTab: 'weitao'
                           });}}>
-          <View></View>
+          {this._renderView()}
         </TabBarIOS.Item>
         <TabBarIOS.Item title="社区"
                         selected={this.state.selectedTab === 'shequ'}
@@ -56,7 +64,7 @@ export default class MNAPP extends Component {
                           this.setState({
                             selectedTab: 'shequ'
                           });}}>
-           <View></View>
+          {this._renderView()}
         </TabBarIOS.Item>
         <TabBarIOS.Item title="购物车"
                         selected={this.state.selectedTab === 'cart'}
@@ -67,7 +75,7 @@ export default class MNAPP extends Component {
                           this.setState({
                             selectedTab: 'cart'
                           });}}>
-          <View></View>
+          {this._renderView()}
         </TabBarIOS.Item>
         <TabBarIOS.Item title="我的淘宝"
                         selected={this.state.selectedTab === 'mine'}
@@ -78,10 +86,32 @@ export default class MNAPP extends Component {
                           this.setState({
                             selectedTab: 'mine'
                           });}}>
-          <View></View>
+          {this._renderView()}
         </TabBarIOS.Item>
       </TabBarIOS>
     );
+  }
+
+  _renderView() {
+    var view = null;
+    switch (this.state.selectedTab) {
+      case 'homepage':
+        view = <Homepage></Homepage>
+        break;
+      case 'weitao':
+        view = <Weitao></Weitao>
+        break;
+      case 'shequ':
+        view = <Shequ></Shequ>
+        break;
+      case 'cart':
+        view = <Cart></Cart>
+        break;
+      case 'mine':
+        view = <Mine></Mine>
+        break;
+    }
+    return view;
   }
 }
 
