@@ -9,46 +9,31 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TabBarIOS
 } from 'react-native';
 
 export default class MNAPP extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          React-Native 入门学习
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <TabBarIOS>
+        <TabBarIOS.Item title="首页" icon={require('./myIcon/lf_tabbar_home.png')} selectedIcon={require('./myIcon/lf_tabbar_home_selected.png')}>
+        </TabBarIOS.Item>
+        <TabBarIOS.Item title="微淘">
+        </TabBarIOS.Item>
+        <TabBarIOS.Item title="社区">
+        </TabBarIOS.Item>
+        <TabBarIOS.Item title="购物车">
+        </TabBarIOS.Item>
+        <TabBarIOS.Item title="我的淘宝">
+        </TabBarIOS.Item>
+      </TabBarIOS>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: 'red',
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+
 });
 
 AppRegistry.registerComponent('MNAPP', () => MNAPP);
